@@ -21,6 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :picture %><br>
+    <%= image_tag(@idea.picture_url) if @idea.picture? %>
     <%= f.file_field :picture %>
   </div>
   <div class="actions">

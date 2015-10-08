@@ -3,8 +3,18 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+# Devise is a flexible authentication solution for Rails based on Warden.
+gem 'devise'
+# An easy way to keep your users' passwords secure.
+gem 'bcrypt'
+#BigHend
+gem 'gravtastic'
+# test letter
+gem "letter_opener", :group => :development
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# _url for the image
+gem "paperclip"
 # I don't know what's it , just do it kr kr.
 gem 'carrierwave'
 # Whatever , that look like about last gem , just done.
