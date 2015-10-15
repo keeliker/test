@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   # :confirmable 信箱驗證, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+  include Gravtastic
+	gravtastic
 end

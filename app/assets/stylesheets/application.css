@@ -16,3 +16,21 @@
 footer { width:100%;h eight:80px; position:absolute; bottom:0; left:0; }
 td { text-align: center; padding-left: 10px; }
 th { border-bottom: 1px solid #DDD; padding-left: 20px; }
+
+/*
+To use gravatar
+*/
+.user-gravatar {
+    display: inline-block;
+    width: 32px;
+    position: relative;
+    margin: 0;
+}
+
+.user-gravatar img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    top: -22px;
+}
