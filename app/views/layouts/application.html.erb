@@ -34,6 +34,7 @@
           
       <%#To use gravatar%>
           <span class="user-gravatar"><%= image_tag current_user.gravatar_url %></span>
+          
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
@@ -61,7 +62,7 @@
 
 <footer>
   <div class="container">
-    現在才開始做會不會太遲了 10/8/2015
+    Easy do it.  10/8/2015
   </div>
 </footer>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
