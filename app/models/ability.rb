@@ -47,9 +47,11 @@ class Ability
   
       cannot :destroy, :all
 
-      #if idea.where( :authorize => "common").user_id.count >= 1
-        can :new, @idea
-      #end
+      can :new, @idea
+
+      if user.ideas_count >= 1
+        cannot :new, @idea
+      end
 
     #elsif user.authorize(:rookie)
     elsif user.authorize == 'rookie'      

@@ -19,11 +19,13 @@ class IdeasController < ApplicationController
 
   # GET /ideas/new
   def new
+    authorize! :new, @idea 
     @idea = Idea.new
   end
 
   # GET /ideas/1/edit
   def edit
+    authorize! :update, @idea 
   end
 
   # POST /ideas

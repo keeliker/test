@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023133451) do
+ActiveRecord::Schema.define(version: 20151023144238) do
 
   create_table "ideas", force: :cascade do |t|
     t.string   "name"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20151023133451) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.string   "authorize"
-    t.integer  "idea_count"
+    t.integer  "ideas_count",            default: 0
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

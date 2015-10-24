@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   # Cancan
   rescue_from CanCan::AccessDenied do |exception| 
-    redirect_to idea_url, :alert => exception.message
+    redirect_to ideas_url, :alert => exception.message
   end
 
   def configure_permitted_parameters
