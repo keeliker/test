@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
 	gravtastic
 
   has_many :ideas
+  has_one :avatar , foreign_key: "user_id" 
 end

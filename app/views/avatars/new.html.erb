@@ -1,0 +1,21 @@
+<h2>Avatar</h2>
+
+  <%= simple_form_for(@avatar , :html => {:multipart => true}) do |f| %>
+
+  <div class="field">  
+    <%= f.label :nickname %><br />  
+    <%= f.text_field :nickname %>  
+  </div>  
+
+  <div class="field">  
+    <%= f.label :head_portrait %><br />  
+    <%= image_tag(@avatar.picture_url(:bighead)) if @avatar.head_portrait? %>  
+    <%= f.file_field :head_portrait %>  
+    <%#= f.hidden_field :head_portrait_cache%>  
+  </div>  
+
+  <div class="actions">  
+    <%= f.submit %>  
+  </div>    
+
+  <% end %>

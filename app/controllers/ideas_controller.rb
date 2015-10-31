@@ -31,7 +31,8 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
-  #  @idea = Idea.new(idea_params)
+  # @idea = Idea.new(idea_params)
+  # 讓新增idea時可存入user id
     @idea = current_user.ideas.new(idea_params)
     respond_to do |format|
       if @idea.save

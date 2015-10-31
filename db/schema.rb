@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023144238) do
+ActiveRecord::Schema.define(version: 20151029133902) do
+
+  create_table "avatars", force: :cascade do |t|
+    t.string   "nickname"
+    t.string   "head_portrait"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ideas", force: :cascade do |t|
     t.string   "name"
@@ -42,6 +50,8 @@ ActiveRecord::Schema.define(version: 20151023144238) do
     t.string   "name"
     t.string   "authorize"
     t.integer  "ideas_count",            default: 0
+    t.string   "head_portrait"
+    t.integer  "avatar_id"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

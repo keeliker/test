@@ -46,8 +46,8 @@ class Ability
       end
   
       cannot :destroy, :all
-
-      can :new, @idea
+      
+      can :new, @avatar
 
       if user.ideas_count >= 1
         cannot :new, @idea

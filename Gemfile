@@ -7,9 +7,11 @@ gem 'rails', '4.2.4'
 gem 'devise'
 # An easy way to keep your users' passwords secure.
 gem 'bcrypt'
-#CanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access.
+# CanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access.
 gem 'cancan'
-#BigHend
+# Simple form
+gem "simple_form"
+# BigHend
 gem 'gravtastic'
 # test letter
 gem "letter_opener", :group => :development

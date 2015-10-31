@@ -9,8 +9,12 @@ class PictureUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [100, 100]
   end
 
-   version :small_thumb, from_version: :thumb do
+  version :small_thumb, from_version: :thumb do
     process :resize_to_fill => [50, 50]
+  end
+
+  version :bighead do
+    process :resize_to_fill => [30, 30]
   end
 
   # Choose what kind of storage to use for this uploader:
@@ -51,8 +55,11 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
+  def filename
+    if @filename
+      Digest::SHA1.hexdigest(original_filename) + File.extname(@filename)
+    end
+  end
 
 end
+    
